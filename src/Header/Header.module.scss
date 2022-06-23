@@ -1,0 +1,29 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+  height: 48px;
+  line-height: 48px;
+  background-color: #4e4e4e;
+
+  .logo {
+    font-weight: bold;
+  }
+
+  a {
+    color: #ffffff;
+  }
+
+  h2 {
+    line-height: 48px;
+    color: #ffffff;
+  }
+
+  ul {
+    display: flex;
+
+    li + li {
+      padding-left: 16px;
+    }
+  }
+}
