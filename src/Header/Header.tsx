@@ -5,23 +5,22 @@ import styles from './Header.module.scss';
 
 interface HeaderProps {}
 
-const Header: FC<HeaderProps> = () => (
-  <Container
-    fluid
-    className={styles.Header}
-  >
-    <Link
-      to="/"
-      className="logo"
-    >Run!</Link>
-    <Nav
-      activeKey="/"
-      as="ul"
+const Header: FC<HeaderProps> = () => {
+  //<Nav.Item as="li"><Link to="/">Home</Link></Nav.Item>
+  return (
+    <Container
+      fluid
+      className={styles.Header}
     >
-      <Nav.Item as="li"><Link to="/">Home</Link></Nav.Item>
-      <Nav.Item as="li"><Link to="/pixi">Pixi</Link></Nav.Item>
-    </Nav>
-  </Container>
-);
+      <p>Run!</p>
+      <Nav
+        activeKey="/"
+        as="ul"
+      >
+        <Nav.Item as="li"><Link to="pixi">Pixi</Link></Nav.Item>
+      </Nav>
+    </Container>
+  )
+};
 
 export default Header;

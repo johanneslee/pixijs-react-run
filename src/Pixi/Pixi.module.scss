@@ -1,1 +1,13 @@
-.Pixi {}
+.Pixi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .Frame {
+    width: 320px;
+    height: 320px;
+    background-color: aqua;
+  }
+}

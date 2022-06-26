@@ -7,7 +7,7 @@ import Footer from '../Footer/Footer';
 interface AppProps {}
 
 const App: FC<AppProps> = () => (
-  <div className="w-100 h-100">
+  <div className={styles.App}>
     <Header></Header>
     <Main></Main>
     <Footer></Footer>
