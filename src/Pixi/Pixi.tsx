@@ -19,13 +19,15 @@ const Pixi: FC<PixiProps> = () => {
       dispatch({
         type: 'update',
         data: {
-          x: (Math.sin(i) * 100) + 160,
-          y: (Math.sin(i / 1.5) * 100) + 160,
+          x: (Math.sin(i) * 70) + 160,
+          y: (Math.sin(i / 1.5) * 70) + 160,
           rotation: Math.sin(i) * Math.PI,
           anchor: Math.sin(i / 2)
         }
       });
     });
+
+
     
     return (
       <Sprite
@@ -39,10 +41,14 @@ const Pixi: FC<PixiProps> = () => {
 
   return (
     <div className={styles.Pixi}>
+      <div className={styles.Title}>
+        <p>Hello Rockman!</p>
+      </div>
       <div className={styles.Frame}>
         <Stage
           width={320}
           height={320}
+          options={{ backgroundColor: 0x4e4e4e }}
         >
           <Rockman />
         </Stage>
