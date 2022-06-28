@@ -1,43 +1,11 @@
-import { Sprite, Stage, useTick } from '@inlet/react-pixi';
-import React, { FC, useReducer, useRef } from 'react';
+import { Stage } from '@inlet/react-pixi';
+import React, { FC } from 'react';
+import Rockman from '../Rockman/Rockman';
 import styles from './Pixi.module.scss';
 
 interface PixiProps {}
 
-interface Action {
-  type: string,
-  data: object
-}
-
 const Pixi: FC<PixiProps> = () => {
-  const reducer = (motion: object, action: Action) => motion = action.data;
-  const Rockman = () => {
-    const [motion, dispatch] = useReducer(reducer, {});
-    const iter = useRef(0);
-    useTick((delta) => {
-      const i = (iter.current += 0.05 * delta);
-      dispatch({
-        type: 'update',
-        data: {
-          x: (Math.sin(i) * 70) + 160,
-          y: (Math.sin(i / 1.5) * 70) + 160,
-          rotation: Math.sin(i) * Math.PI,
-          anchor: Math.sin(i / 2)
-        }
-      });
-    });
-
-
-    
-    return (
-      <Sprite
-        image="/images/chara-run.png"
-        width={40}
-        height={40}
-        {...motion}
-      />
-    )
-  }
 
   return (
     <div className={styles.Pixi}>
