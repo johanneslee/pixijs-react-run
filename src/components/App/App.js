@@ -5,14 +5,16 @@ import Header from '../Header/Header'
 import Main from '../Main/Main'
 import Footer from '../Footer/Footer'
 
-function App() {
-  return (
-    <div className={styles.App}>
-      <Header />
-      <Main />
-      <Footer />
-    </div>
-  );
-}
+const App = () => (
+  <div className={styles.App}>
+    <Header />
+    <Main />
+    <Footer />
+  </div>
+);
+
+App.propTypes = {};
+
+App.defaultProps = {};
 
 export default App;
