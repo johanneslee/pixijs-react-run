@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Pixi.module.scss';
-import { Container, Sprite, Stage } from '@inlet/react-pixi'
+import { Container, Stage } from '@inlet/react-pixi'
+import * as P2 from '../../services/P2/P2';
 import FlyingRockman from '../FlyingRockman/FlyingRockman';
 import ListeningRockman from '../ListeningRockman/ListeningRockman';
-
+import Background from '../Background/Background';
 
 const Pixi = () => {
   return (
@@ -18,13 +19,7 @@ const Pixi = () => {
           x={160}
           y={160}
         >
-          <Sprite
-            x={-160}
-            y={-160}
-            width={320}
-            height={320}
-            image="/images/grid.png"
-          />
+          <Background />
           <FlyingRockman />
           <ListeningRockman />
         </Container>
