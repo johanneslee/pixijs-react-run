@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Pixi.module.scss';
 import { Container, Stage } from '@inlet/react-pixi'
-import { init } from '../../services/P2/P2';
 import FlyingRockman from '../FlyingRockman/FlyingRockman';
-import ListeningRockman from '../ListeningRockman/ListeningRockman';
 import Background from '../Background/Background';
 
 const Pixi = () => {
@@ -22,7 +20,6 @@ const Pixi = () => {
         >
           <Background />
           <FlyingRockman />
-          <ListeningRockman />
         </Container>
       </Stage>
     </div>
